@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "dark2", // "light1", "light2", "dark1", "dark2"
+	title:{
+		text: "Passengers for each Trip"
+	},
+	axisY: {
+		title: "Number of Passengers"
+	},
+	data: [{        
+		type: "column",  
+		showInLegend: true, 
+		legendMarkerColor: "grey",
+		legendText: "Trips",
+		dataPoints: [      
+			{ y: 1, label: "Thembisa-Sandton" },
+			{ y: 2,  label: "Vosloorus-Centurion" },
+			{ y: 45,  label: "Bushu-Don Don" },
+			{ y: 19,  label: "Vuvuzel-Zib Zib" },
+			{ y: 35,  label: "Bush-Leondale" },
+			{ y: 15, label: "Germiston-Pretoria" },
+			{ y: 20,  label: "Soweto-DFC" },
+			{ y: 10,  label: "APK-Newtown" }
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<br/>
+<br/>
+<br/>
+<br/> <!--Skips a line -->
+<div id="chartContainer" style="height: 300px; width: 90%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

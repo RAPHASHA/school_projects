@@ -1,0 +1,55 @@
+<!-- Styles  for the pie chart -->
+<style>
+#chartdiv {
+  width: 100%;
+  height: 500px;
+}
+
+</style>
+
+<!-- Scripts used  -->
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/kelly.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+<!-- pie chart code -->
+<script>
+am4core.ready(function() {
+
+am4core.useTheme(am4themes_kelly);
+am4core.useTheme(am4themes_animated);
+
+var chart = am4core.create("chartdiv", am4charts.PieChart);
+
+//  data for graph
+chart.data = [ {
+  "user": "Manager",
+  "number": 1
+}, {
+  "user": "Drivers",
+  "number": 9
+}, {
+  "user": "Passengers",
+  "number": 30
+} ];
+
+// Add and configure Series
+var pieSeries = chart.series.push(new am4charts.PieSeries());
+pieSeries.dataFields.value = "number";
+pieSeries.dataFields.category = "user";
+pieSeries.slices.template.stroke = am4core.color("#fff");
+pieSeries.slices.template.strokeWidth = 2;
+pieSeries.slices.template.strokeOpacity = 1;
+
+// This creates animation
+pieSeries.hiddenState.properties.opacity = 1;
+pieSeries.hiddenState.properties.endAngle = -90;
+pieSeries.hiddenState.properties.startAngle = -90;
+
+}); 
+</script>
+
+<!-- HTML -->
+<div id="chartdiv"></div>

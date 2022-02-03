@@ -1,0 +1,32 @@
+﻿@model WebApplication.Models.MultipleData
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    var pickupareas = Model.PickUpAreas;
+    var dropoffareas = Model.DropOffAreas;
+
+
+    foreach (var item in pickupareas)
+    {
+        @item.PickUpArea
+        <br />
+        @item.TimeArrival
+        <br />
+        @item.TimeDepature
+        <br />
+    }
+
+
+    foreach (var item in dropoffareas)
+    {
+        @item.DropOffArea
+        <br />
+        @item.TimeArrival
+        <br />
+        @item.TimeDepature
+        <br />
+    }
+}

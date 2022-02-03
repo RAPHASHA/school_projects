@@ -1,0 +1,157 @@
+﻿@model WebApplication.Models.MultipleData
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<script>
+    function SelectDriverType() {
+        var selec = document.getElementById("DriverTypeId");
+        var dis = selec.options[selec.selectedIndex].text;
+        document.getElementById("mytext").value = dis;
+    }
+
+    function SelectGender() {
+        document.getElementsByName('radio1')
+            .forEach(radio => {
+                if (radio.checked) {
+                    document.getElementById("inGender").value = radio.value;
+                }
+            });
+    }</script>
+<link href="~/TaxiClubStyles/TaxiClubStyleSheet.css" rel="stylesheet" />
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+
+                <!-- Profile Image -->
+                <!-- Profile Image -->
+                <div class="card card-danger card-outline">
+                    <div class="card-body box-profile">
+                        <div class="text-center">
+                            <img class="profile-user-img img-fluid img-circle"
+                                 src="~/images/user1.jpg"
+                                 alt="User profile picture">
+                        </div>
+                        <h3 class="profile-username text-center"> @Html.DisplayFor(model => model.Driver.Name)  @Html.DisplayFor(model => model.Driver.Surname)</h3>
+                        <p class="text-muted text-center">Driver @Model.Driver.id </p>
+                        <ul class="list-group list-group-unbordered mb-3">
+                            <li class="list-group-item">
+                                <b>Trips Completed</b> <a class="float-right">204</a>
+                            </li>
+                            <li class="list-group-item">
+                                <b>Amount Due</b> <a class="float-right">R543.00</a>
+                            </li>
+                            <li class="list-group-item">
+                                <b>Ratings</b> <a class="float-right">3/10 Stars</a>
+                            </li>
+                        </ul>
+                        <form asp-action="Delete">
+                            <input type="hidden" asp-for="@Model.Driver.id" />
+                            <input type="submit" style="width:180px" value="UPDATE" class="btn btn-danger" />
+                        </form>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+
+
+                <!-- Profile Image -->
+                <div class="card card-danger card-outline">
+                    <div class="card-body box-profile">
+                        <h3 class="profile-username text-center"> AREA #.DropOffAreaID</h3>
+                        <p class="text-muted text-center">.DropOffArea</p>
+                        <ul class="list-group list-group-unbordered mb-3">
+                            <li class="list-group-item">
+                                <b>Linked with</b> <a class="float-right">5 Trips</a>
+                            </li>
+                            <li class="list-group-item">
+                                <b>Routes</b> <a class="float-right">5</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+                <!-- About Me Box -->
+                <div class="card card-danger">
+                    <div class="card-header">
+                        <h3 class="card-title"> Trip .id</h3>
+                    </div>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-header p-2">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item"><a asp-action="Profile" asp-route-id="@Model.Driver.id" class="nav-link">Activity</a></li>
+                            <li class="nav-item"><a asp-action="Driver" asp-route-id="@Model.Driver.id" class="btn btn-danger active">Driver</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#update" data-toggle="tab">Reports</a></li>
+                        </ul>
+                    </div><!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="active tab-pane" id="update">
+                                <!-- Post -->
+                                <div class="card card-red">
+                                    <div class="card-header">
+                                        <h3 class="card-title ">DRIVER #@Model.Driver.id (THIS DRIVER IS NOT ASSIGNED A VEHICLE)</h3>
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body" style="background-color:white">
+                                        <div class="row">
+                                            <div>
+                                              
+                                                </br>
+                                                <div class="row">
+                                                    <form role="form" asp-action="AssignVehicle">
+                                                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <!-- select -->
+                                                                <div class="form-group">
+                                                                    <label>Select a vehicle for Mr @Model.Driver.Name @Model.Driver.Name</label>
+                                                                    <br />
+                                                                    <br />
+                                                                    @{ var vehicles = Model.Vehicles;
+                                                                        @Html.DropDownListFor(model => model.Registration, new SelectList(Model.Vehicles, "Registration", "Name"), "Select") }
+                                                                    <span asp-validation-for="@Model.Driver.Registration" class="text-danger"></span>
+                                                                </div>
+                                                            </div>
+                                                            <br />
+                                                            <br />
+                                                        </div>
+                                                        <br />
+                                                        <input type="submit" value="Assign vehicle" asp-route-id="@Model.Driver.id" class="btn btn-danger" />
+                                                        <a asp-area="" asp-controller="Drivers" asp-action="List" class="btn btn-danger">Drivers</a>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                                <!-- Post -->
+                                <!-- /.post -->
+                            </div>
+
+                            <!-- /.tab-pane -->
+                        </div>
+                        <!-- /.tab-content -->
+                    </div><!-- /.card-body -->
+                </div>
+                <!-- /.nav-tabs-custom -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
+
+

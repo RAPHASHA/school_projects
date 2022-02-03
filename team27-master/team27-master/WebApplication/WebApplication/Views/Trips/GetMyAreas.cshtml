@@ -1,0 +1,17 @@
+﻿@model WebApplication.Models.MultipleData
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    var pickupareas = Model.PickUpAreas;
+    var dropoffareas = Model.DropOffAreas;
+
+
+    @Html.DropDownListFor(model => model.PickUpAreas, new SelectList(Model.PickUpAreas, "id", "PickUpArea"), "Select")
+
+    @Html.DropDownListFor(model => model.DropOffAreas, new SelectList(Model.DropOffAreas, "id", "DropOffArea"), "Select")
+
+
+    }   

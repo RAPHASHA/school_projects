@@ -1,0 +1,6 @@
+Movements:
+w- up
+s- down
+a- left
+d- right
+collect all the tresures and then escape before an animal catches you

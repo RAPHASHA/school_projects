@@ -1,0 +1,186 @@
+﻿@model WebApplication.Models.PickUpAreaModel
+
+@{
+    ViewData["Title"] = "Trips";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<script>
+    function SelectDriverType() {
+        var selec = document.getElementById("DriverTypeId");
+        var dis = selec.options[selec.selectedIndex].text;
+        document.getElementById("mytext").value = dis;
+    }
+
+    function SelectGender() {
+        document.getElementsByName('radio1')
+            .forEach(radio => {
+                if (radio.checked) {
+                    document.getElementById("inGender").value = radio.value;
+                }
+            });
+    }</script>
+<link href="~/TaxiClubStyles/TaxiClubStyleSheet.css" rel="stylesheet" />
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+
+                <!-- Profile Image -->
+                <div class="card card-primary card-outline">
+                    <div class="card-body box-profile">
+
+                        <img class="mylogo" style="width:150px !important"
+                             src="~/images/logos.jpg">
+
+
+                        <h3 class="profile-username text-center">TAXI-CLUB</h3>
+                        <p class="text-muted text-center">Admin</p>
+                        <ul class="list-group list-group-unbordered mb-3">
+                            <li class="list-group-item">
+                                <b>TaxiClub Email</b> </br> <p>TaxiClub@gmail.com</p>
+                            </li>
+                            <li class="list-group-item">
+                                <b>TaxiClub Phone-Number</b> </br><p>(011)-053-4535</p>
+                            </li>
+                            <li class="list-group-item">
+                                <b>TaxiClub Fax </b> </br> <p>(011)-053-4535</p>
+                            </li>
+                        </ul>
+                        <form asp-action="Delete">
+                            <input type="submit" style="width:180px" value="UPDATE" class="btn btn-primary" />
+                        </form>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+                <!-- About Me Box -->
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">PASSENGER</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <strong><i class="fas fa-book mr-1"></i> detail submitted</strong>
+
+                        <p class="text-muted">
+                            Documents recieved
+                        </p>
+                        <hr>
+                        <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
+                        <p class="text-muted">Johanesburg</p>
+                        <hr>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-header p-2">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item"><a class="nav-link" asp-action="Main">Activity</a></li>
+                            <li class="nav-item"><a class="btn btn-primary" asp-action="AddPickUpArea">PickUp</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-action="AddDropOffArea">DropOff</a></li>
+                             <li class="nav-item"><a class="nav-link" asp-action="Add">Trip</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-action="List">List</a></li>
+                            
+                        </ul>
+                    </div><!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="active tab-pane" id="update">
+                                <!-- Post -->
+                                <div class="card card-primary">
+                                    <div class="card-header">
+                                        <h3 class="card-title">ADD AREA</h3>
+                                    </div>
+                                    <!-- /.card-header -->
+
+                                    <div class="card-body" style="height:350px;">
+                                        <form role="form" asp-action="AddPickUpArea">
+                                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                            <div class="row" style="position:relative; left:150px; top:30px;">
+                                                <div class="col-sm-6">
+                                                    <!-- select -->
+                                                    <div class="form-group">
+                                                        <label>Pick Up Area</label>
+                                                        <input type="text" asp-for="PickUpArea" class="form-control" placeholder="Enter Pick up Area">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row" style="position:relative; left:150px; top:50px">
+                                                <div class="col-sm-3">
+                                                    <!-- text input -->
+                                                    <label class="control-lable">Arrival Time</label>
+                                                    <div class="form-group">
+                                                        <select class="form-control" asp-for="@Model.TimeArrival" id="DriverTypeId" onchange="SelectDriverType();">
+                                                            <option>05:00am</option>
+                                                            <option>06:00am</option>
+                                                            <option>07:00am</option>
+                                                            <option>08:00am</option>
+                                                            <option>09:00am</option>
+                                                            <option>18:00pm</option>
+                                                            <option>19:00pm</option>
+                                                            <option>20:00pm</option>
+                                                        </select>
+                                                        <span class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <!-- text input -->
+                                                    <label class="control-lable">Arrival Time</label>
+                                                    <div class="form-group">
+                                                        <select class="form-control" asp-for="@Model.TimeDepature" id="DriverTypeId" onchange="SelectDriverType();">
+                                                            <option>05:00am</option>
+                                                            <option>06:00am</option>
+                                                            <option>07:00am</option>
+                                                            <option>08:00am</option>
+                                                            <option>09:00am</option>
+                                                            <option>18:00pm</option>
+                                                            <option>19:00pm</option>
+                                                            <option>20:00pm</option>
+                                                        </select>
+                                                        <span class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row" style="position:relative; top:50px;">
+                                                <div class="col-sm-12">
+                                                    <!-- text input -->
+                                                    <div class="form-group">
+                                                        <br />
+                                                        <input type="submit" value="Create" class="btn btn-success" />
+                                                        <input type="submit" value="Cancel" class="btn btn-dark" />
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </form>
+                                     </div>
+                                    <!-- /.card-body -->
+                                </div>
+                                <!-- Post -->
+                                <!-- /.post -->
+                            </div>
+
+                            <!-- /.tab-pane -->
+                        </div>
+                        <!-- /.tab-content -->
+                    </div><!-- /.card-body -->
+                </div>
+                <!-- /.nav-tabs-custom -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
+
+
+

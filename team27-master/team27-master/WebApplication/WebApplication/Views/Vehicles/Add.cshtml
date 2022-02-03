@@ -1,0 +1,209 @@
+﻿@model WebApplication.Models.Vehicle
+
+@{
+    ViewData["Title"] = "Vehicles";
+}
+
+
+<h1>@ViewData["Title"]</h1>
+
+<script>
+    function SelectDriverType() {
+        var selec = document.getElementById("DriverTypeId");
+        var dis = selec.options[selec.selectedIndex].text;
+        document.getElementById("mytext").value = dis;
+    }
+
+    function SelectGender() {
+        document.getElementsByName('radio1')
+            .forEach(radio => {
+                if (radio.checked) {
+                    document.getElementById("inGender").value = radio.value;
+                }
+            });
+    }</script>
+<link href="~/TaxiClubStyles/TaxiClubStyleSheet.css" rel="stylesheet" />
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+
+                <!-- Profile Image -->
+                <div class="card card-primary card-outline">
+                    <div class="card-body box-profile">
+
+                        <img class="mylogo" style="width:150px !important"
+                             src="~/images/logos.jpg">
+
+
+                        <h3 class="profile-username text-center">TAXI-CLUB</h3>
+                        <p class="text-muted text-center">Admin</p>
+                        <ul class="list-group list-group-unbordered mb-3">
+                            <li class="list-group-item">
+                                <b>TaxiClub Email</b> </br> <p>TaxiClub@gmail.com</p>
+                            </li>
+                            <li class="list-group-item">
+                                <b>TaxiClub Phone-Number</b> </br><p>(011)-053-4535</p>
+                            </li>
+                            <li class="list-group-item">
+                                <b>TaxiClub Fax </b> </br> <p>(011)-053-4535</p>
+                            </li>
+                        </ul>
+                        <form asp-action="Delete">
+                            <input type="submit" style="width:180px" value="UPDATE" class="btn btn-primary" />
+                        </form>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+                <!-- About Me Box -->
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">PASSENGER</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <strong><i class="fas fa-book mr-1"></i> detail submitted</strong>
+
+                        <p class="text-muted">
+                            Documents recieved
+                        </p>
+                        <hr>
+                        <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
+                        <p class="text-muted">Johanesburg</p>
+                        <hr>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-header p-2">
+                        <ul class="nav nav-pills">
+
+                            
+                            <li class="nav-item"><a class="btn btn-primary" asp-action="Add">Add</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-action="List">List</a></li>
+                            
+
+                        </ul>
+                    </div><!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="active tab-pane" id="update">
+                                <!-- Post -->
+                                <div class="card card-primary">
+                                    <div class="card-header">
+                                        <h3 class="card-title">ADD VEHICLE</h3>
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body">
+                                        <form role="form" asp-action="Add">
+                                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <!-- text input -->
+                                                    <div class="form-group">
+                                                        <label  class="control-lable">Vehicle Name</label>
+                                                        <input type="text" asp-for="Name" class="form-control" placeholder="Enter Name">
+                                                        <span asp-validation-for="Name" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label>Vehicle-Type</label>
+                                                        <select class="form-control" asp-for="Type" id="DriverTypeId" onchange="SelectDriverType();">
+                                                            <option>Sudan</option>
+                                                            <option>Mini-Bus</option>
+                                                            <option>Bus</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label>Vehicle State</label>
+                                                    <!-- text input -->
+                                                    <div class="form-check">
+                                                        @Html.RadioButtonFor(model => model.StateDescription, "New") Under A year
+                                                    </div>
+                                                    <div class="form-check">
+                                                        @Html.RadioButtonFor(model => model.StateDescription, "Working") Over A year
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label asp-for="Registration" class="control-lable"></label>
+                                                        <input type="text" asp-for="Registration" class="form-control" placeholder="Enter Registration">
+                                                        <span asp-validation-for="Registration" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- input states -->
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <!-- text input -->
+                                                    <div class="form-group">
+                                                        <label asp-for="Capacity" class="control-lable"></label>
+                                                        <input type="text" asp-for="Capacity" class="form-control" placeholder="Enter Capacity">
+                                                        <span asp-validation-for="Capacity" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <!-- text input -->
+                                                    <div class="form-group">
+                                                        <label>State Description</label>
+                                                        <select class="form-control" asp-for="StateDescription" id="DriverTypeId" onchange="SelectDriverType();">
+                                                            <option>Working</option>
+                                                            <option>Not Working</option>
+                                                            <option>Needs repairs</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6" style="height:50px;">
+                                                    <label>Purpose</label>
+                                                    <select class="form-control" asp-for="Description" id="DriverTypeId" onchange="SelectDriverType();">
+                                                        <option>School Excursions</option>
+                                                        <option>Lift Club</option>
+                                                        <option>Private use</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <!-- select -->
+                                                    <input type="submit" value="Create" class="btn btn-primary" />
+                                                    <a asp-action="Index" class="btn btn-dark">Back</a>
+                                                </div>
+                                         
+                                            </div>
+                                          
+                                        </form>
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                                <!-- Post -->
+                                <!-- /.post -->
+                            </div>
+
+                            <!-- /.tab-pane -->
+                        </div>
+                        <!-- /.tab-content -->
+                    </div><!-- /.card-body -->
+                </div>
+                <!-- /.nav-tabs-custom -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+
+
+</section>
+
+

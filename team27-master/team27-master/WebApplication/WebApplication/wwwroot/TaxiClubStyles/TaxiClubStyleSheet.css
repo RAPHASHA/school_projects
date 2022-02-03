@@ -1,0 +1,281 @@
+﻿body {
+}
+
+
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: rgba(255, 247, 0, 1);
+}
+
+Inline style {
+    color: rgba(0, 0, 0, 1) !important;
+}
+
+.btn-primary{
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(255, 247, 0, 1) !important;
+    border-color: rgba(255, 247, 0, 1) !important;
+    
+}
+
+.card-primary.card-outline {
+    border-top: 3px solid rgba(255, 247, 0, 1) !important;
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: rgba(255, 247, 0, 1) !important;
+}
+
+:not(.card-outline).card-primary > .card-header {
+    background-color: rgba(255, 247, 0, 1) !important;
+    color: rgba(0, 0, 0, 1);
+}
+
+.small-box{
+    color: rgba(0, 0, 0, 1) !important;
+    background-color: rgba(255, 247, 0, 1) !important;
+    border-color: rgba(255, 247, 0, 1) !important;
+}
+
+.small-box-footer {
+    background: rgba(0,0,0,1) !important;
+    display: block;
+    padding: 3px 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    z-index: 10;
+}
+
+.login-page{
+    background: rgba(255, 247, 0, 1) !important;
+    top: 50px;
+    position:relative !important;
+    left:-150px;
+}
+
+.logo-pic {
+    width: 300px;
+    height: 150px;
+    position: center !important;
+    position: relative !important;
+    left: 430px;
+    top: -300px;
+}
+
+.main-sidebar {
+    height: inherit;
+    min-height: 100%;
+    position: absolute;
+    top: 0px;
+    background: rgba(0,0,0,1) !important;
+    color: #fff;
+}
+
+
+.text-muted {
+    color: rgba(0, 0, 0, 1) !important;
+}
+
+.mylogo{
+    height:60px !important;
+    width: 60px !important;
+}
+
+.post {
+    color: rgba(0, 0, 0, 1) !important;
+}
+
+.nav-link{
+
+}
+
+
+.myName {
+    background: #c2c7d0 !important;
+    width: 233px;
+    height: 15px;
+    color: rgba(0, 0, 0, 1) !important;
+}
+
+.barlogo {
+    width: 150px;
+    height: 60px;
+    position: center !important;
+    position: relative !important;
+    left: 20px;
+    top: 20px;
+}
+
+.carlogo {
+    width: 50px;
+    height: 50px;
+}
+
+.MyHeadline2 {
+    height: 30px !important;
+    width: 500px !important;
+    position: relative !important;
+    left: 0px;
+    top: 30px !important;
+}
+
+.MyHeadline11 {
+    height: 30px !important;
+    width: 500px !important;
+    position: relative !important;
+    left: 0px;
+    top: 10px !important;
+}
+
+
+.MyWord1 {
+    height: 15px !important;
+    width: 130px !important;
+    position: relative !important;
+    left: 50px;
+    top: 50px;
+}
+
+.TripDate {
+    height: 15px !important;
+    width: 130px !important;
+    position: relative !important;
+    left: 50px;
+    top: -20px;
+}
+
+.NumberOfPassengers {
+    height: 15px !important;
+    width: 200px !important;
+    position: relative !important;
+    left: 70px;
+    top: -20px;
+}
+
+
+.DepartureTime {
+    height: 15px !important;
+    width: 250px !important;
+    position: relative !important;
+    left: 50px;
+    top: -30px;
+}
+
+.emailstuff {
+    position: relative !important;
+    left: 0px!important;
+
+}
+
+.ArrivalTime {
+    height: 15px !important;
+    width: 250px !important;
+    position: relative !important;
+    left: 70px;
+    top: -30px;
+}
+
+.Something2 {
+    height: 15px !important;
+    width: 250px !important;
+    position: relative !important;
+    left: 90px;
+    top: -30px;
+}
+
+.MyWord2 {
+    height: 15px !important;
+    width: 130px !important;
+    position: relative !important;
+    left: 50px;
+    top: 50px;
+}
+
+
+
+.PickUpLocation {
+    height: 15px !important;
+    width: 200px !important;
+    position: relative !important;
+    left: 50px;
+    top: 10px;
+}
+
+.DropOffLocation {
+    height: 15px !important;
+    width: 200px !important;
+    position: relative !important;
+    left: 70px;
+    top: 10px;
+}
+
+.CalculatedLocation {
+    height: 15px !important;
+    width: 200px !important;
+    position: relative !important;
+    left: 90px;
+    top: 10px;
+}
+
+.MyWordDropOffHead {
+    height: 15px !important;
+    width: 200px !important;
+    position: relative !important;
+    left: 70px;
+    top: 50px;
+}
+
+.MyWordDropOffBotton {
+    height: 15px !important;
+    width: 130px !important;
+    position: relative !important;
+    left: 70px;
+    top: 50px;
+}
+
+.CalDistanceHead {
+    height: 15px !important;
+    width: 250px !important;
+    position: relative !important;
+    left: 90px;
+    top: 50px;
+}
+
+.CalDistanceBottom {
+    height: 15px !important;
+    width: 250px !important;
+    position: relative !important;
+    left: 90px;
+    top: 50px;
+}
+
+.phuzaface{
+    width: 70px!important;
+    height: 70px!important;
+}
+
+.myCenter {
+    position: relative !important;
+    left: 100px;
+    top: -10px;
+    width:400px!important;
+    height:400px!important;
+}
+
+.myCenter2 {
+    position: relative !important;
+    left: 200px;
+    top: 20px;
+    width: 200px !important;
+    height: 200px !important;
+}
+
+.myCenter3 {
+    position: relative !important;
+    left: 200px;
+    top: 20px;
+    width: 200px !important;
+    height: 200px !important;
+}
+

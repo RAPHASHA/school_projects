@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "8ptHiYvV5p0/BkD28Y2I8CzUNbn5DZmnQULiOODFPZKUwhf1R9s9rQ8zCYJto2m6azJ38eZmrf19KKmYD27ufA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\rapha\\Desktop\\team27\\WebApplication\\WebApplication\\WebApplication.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rapha\\.nuget\\packages\\microsoft.typescript.msbuild\\4.0.3\\microsoft.typescript.msbuild.4.0.3.nupkg.sha512",
+    "C:\\Users\\rapha\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

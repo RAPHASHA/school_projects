@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home_id"
+            android:icon="@drawable/home_icon"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_areas_id"
+            android:icon="@drawable/home_icon"
+            android:title="Areas" />
+        <item
+            android:id="@+id/nav_trips_id"
+            android:icon="@drawable/home_icon"
+            android:title="Trips" />
+        <item
+            android:id="@+id/nav_vehicle_id"
+            android:icon="@drawable/home_icon"
+            android:title="Vehicle" />
+    </group>
+
+
+        <item android:title="Services">
+            <menu>
+                <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_passengers_id"
+                    android:icon="@drawable/home_icon"
+                    android:title="Passenger" />
+                </group>
+            </menu>
+        </item>
+
+
+
+        <item android:title="Account">
+            <menu>
+                <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_profile_id"
+                    android:icon="@drawable/home_icon"
+                    android:title="Profile" />
+
+                <item
+                    android:id="@+id/nav_logout_id"
+                    android:icon="@drawable/home_icon"
+                    android:title="Vehicle" />
+                </group>
+            </menu>
+        </item>
+
+
+
+</menu>

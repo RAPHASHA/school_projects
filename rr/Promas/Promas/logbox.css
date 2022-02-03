@@ -1,0 +1,88 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-image: url(images/wp3413575.jpg);
+    background-size: cover;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.loginbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 420px;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    background: rgba(255,255,255,5);
+    border-radius: 50px;
+}
+.user{
+   
+    width:100px;
+    height:100px;
+    overflow:hidden;
+    top:calc(-100px/2);
+    left:calc(50%-50px);
+    position:absolute;
+
+
+}
+h2{
+
+    padding:0;
+    margin:0;
+       text-align:center;
+       color:rgb(243, 208, 12);
+
+
+
+}
+.labelemail,.labelpass{
+
+    font-weight:bold;
+    color:#000000;
+
+
+
+}
+.textemail,.txtpass, .btnsumit{
+
+    width:100%;
+    margin-bottom:20px;
+
+}
+.textemail, .txtpass {
+    border: none;
+    border-bottom: 2px solid #ff00dc;
+    outline: none;
+    height: 40px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    background: none;
+    border-radius: 20px;
+}
+.placeholder{
+    color:rgba(255,255,255,5);
+
+}
+.btnsumit{
+
+
+    border:none;
+    outline:none;
+    height:40px;
+    font-size:16px;
+    color:#fff;
+    background-color:rgb(255,9,9);
+    cursor:pointer;
+    border-radius:20px;
+    transition:3s ease-in-out;
+
+}
+.btnsumit:hover
+{
+
+    background-color:rgb(255,217,9);
+}
+

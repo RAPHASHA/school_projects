@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="PCDBML">
+  <DataContextMoniker Name="/PCDBMLDataContext" />
+  <nestedChildShapes>
+    <classShape Id="104e258a-8b1b-4b07-bb19-98a3a1b075d3" absoluteBounds="3.75, 0.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/PCDBMLDataContext/Percusion_Instrument" />
+      <nestedChildShapes>
+        <elementListCompartment Id="89d229f1-c2fc-46ea-ad02-5230130da3e7" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c93f60bb-4a54-49bf-8f57-d8f8c2e6f55b" absoluteBounds="0.75, 3.75, 2, 2.347801106770834">
+      <DataClassMoniker Name="/PCDBMLDataContext/Seller" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cde885e6-ea92-4dc6-b175-d1a4e115c681" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8aec066f-3dd3-4ae7-a744-b8d5248b8e50" absoluteBounds="3.75, 3.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/PCDBMLDataContext/String_Instrument" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c2bc4879-e229-4de9-a453-13f47c10d9aa" absoluteBounds="3.765, 4.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a07eb5c8-145c-4fcd-b4cb-f39edd6fd733" absoluteBounds="6.75, 0.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/PCDBMLDataContext/Wind_Instrunent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0c43639a-1c51-4439-9afc-0e416fc643bb" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="164ab2ba-d3f8-4f94-81cb-2135741dd65f" absoluteBounds="1.5, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/PCDBMLDataContext/BuyerT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5bbb33f0-d2a8-414b-a534-3f349ccad413" absoluteBounds="1.5150000000000001, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
